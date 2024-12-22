@@ -3,16 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Okonkwo Sim</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+
 </head>
 <body>
+
+    <div id="topRightText">v 0.0.0.2</div>
+
+    <div class="dropdown">
+        <button class="dropdown-button">
+            <img src="settings.png" alt="Dropdown Button">
+        </button>
+        <div class="dropdown-content">
+            <a href="https://en.wikipedia.org/wiki/Things_Fall_Apart">Sources</a>
+            <a href="#about" id="openOverlay">About</a>
+            
+        </div>
+    </div>
+
+   
+    <script>
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const aboutSection = document.getElementById('about');
+        const showOriginLink = document.getElementById('aboutSection');
+
+        // Toggle dropdown menu
+        dropdownButton.addEventListener('click', () => {
+            dropdownContent.style.display =
+                dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Show the "Origin" section when Option 2 is clicked
+        showOriginLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            about.style.display = 'block'; // Show the section
+        });
+
+        // Close the dropdown menu when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!dropdownButton.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+    </script>
+
+
+    <script src="init.js"></script>
+
     <h1>Welcome to Okonkwo Sim</h1>
-    <button id="yamButton">Farm Yams</button>
+
+    <button id="yamButton">Farm Yams</button> <span id="yamsPSDisplay">0</span> Yams per second
     <p>Yams: <span id="yamCounterDisplay">0</span></p>
 
-    <button id="clickPowerButton">Get Stronger Hoe</button>
+    <button id="sellAllYams">Sell All Yams</button> <button id="sellTenYams">Sell 10% Yams</button>
+    <p>Cowries: <span id="moneyDisplay">0</span></p>
+  
+    <button id="clickPowerButton">Get Stronger Hoe  </button>  Costs: <span id="clickPowerCostDisplay">10</span> Cowries
     <p>Strength of Hoe: <span id="clickPowerDisplay">1</span></p>
 
+    <button id="wivesButton">Get a wife </button> Costs: <span id=wivesCostMoneyDisplay>100 </span> Cowries & <span id="wivesCostYamsDisplay">10 </span> Yams
+    <p>Number of Wives: <span id="wifesDisplay">1</span></p>
+
+
+   
     <script src="index.js"></script>
+    
+<script> // This is all for overlays </script>
+
+   
+
+    <div id="overlay" class="hidden">
+        <div class="overlay-content">
+            <p>This is all an in-joke. </p>
+            <button id="closeOverlay">Close About</button>
+        </div>
+    </div>
+
+
+    <script>
+    // script.js
+    document.getElementById('openOverlay').addEventListener('click', () => {
+        document.getElementById('overlay').classList.remove('hidden');
+    });
+    
+    document.getElementById('closeOverlay').addEventListener('click', () => {
+        document.getElementById('overlay').classList.add('hidden');
+    });
+</script>
+
 </body>
 </html>
