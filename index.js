@@ -1,10 +1,11 @@
 
+
+
 // Select the button and counter display elements
 const yamButton = document.getElementById('yamButton');
 const yamCounterDisplay = document.getElementById('yamCounterDisplay');
 
 const clickPowerbutton = document.getElementById('clickPowerButton');
-const counterDisplay = document.getElementById('clickPowerDisplay');
 
 // Add a click event listener to the button
 yamButton.addEventListener('click', () => {
@@ -46,21 +47,168 @@ sellTenYams.addEventListener('click', () => {
 
 } )
 
-
-clickPowerButton.addEventListener('click', () => {
+// this is the start of click upgrades
+clickPowerButton1.addEventListener('click', () => {
     
-    if (money >= clickPowerCost) {
+    if (money >= clickPowerCost1) {
     perClick = perClick + 1
-    money = money - clickPowerCost
+    money = money - clickPowerCost1
     moneyDisplay.textContent = money;
-    clickPowerCost = clickPowerCost * 1.5
-    clickPowerCost = Math.floor (clickPowerCost)
-    
-    clickPowerCostDisplay.textContent = clickPowerCost; 
-}
-    clickPowerDisplay.textContent = perClick;
-});
 
+    clickPowerDisplay.textContent = perClick;
+  
+  }});
+  function hideButton1() {
+    if (money >= clickPowerCost1) {
+    let hiddenButton = document.getElementById('clickPowerButton1')
+    let hiddenText = document.getElementById('costClickPower1')
+    let shownButton = document.getElementById('clickPowerButton2')
+    let shownText = document.getElementById('costClickPower2')
+        hiddenText.style.display = 'none'; 
+        hiddenButton.style.display = 'none'; 
+        shownButton.style.display = 'block';
+        shownText.style.display = 'block';
+      }}
+
+clickPowerButton2.addEventListener('click', () => {
+    
+        if (money >= clickPowerCost2) {
+        perClick = perClick * 2
+        money = money - clickPowerCost2
+        moneyDisplay.textContent = money;
+        
+        clickPowerDisplay.textContent = perClick;
+      
+      }});
+function hideButton2() {
+        if (money >= clickPowerCost1) {
+        let hiddenButton = document.getElementById('clickPowerButton2')
+        let hiddenText = document.getElementById('costClickPower2')
+        let shownButton = document.getElementById('clickPowerButton3')
+        let shownText = document.getElementById('costClickPower3')
+            hiddenText.style.display = 'none'; 
+            hiddenButton.style.display = 'none'; 
+            shownButton.style.display = 'block';
+            shownText.style.display = 'block';
+          }}
+    
+clickPowerButton3.addEventListener('click', () => {
+    
+            if (money >= clickPowerCost3) {
+            perClick = perClick * 2
+            money = money - clickPowerCost3
+            moneyDisplay.textContent = money;
+         
+            
+            clickPowerDisplay.textContent = perClick;
+          
+          }});
+function hideButton3() {
+        if (money >= clickPowerCost1) {
+            let hiddenButton = document.getElementById('clickPowerButton3')
+            let hiddenText = document.getElementById('costClickPower3')
+            let shownButton = document.getElementById('clickPowerButton4')
+            let shownText = document.getElementById('costClickPower4')
+                hiddenText.style.display = 'none'; 
+                hiddenButton.style.display = 'none'; 
+                shownButton.style.display = 'block';
+                shownText.style.display = 'block';
+              }}
+
+clickPowerButton3.addEventListener('click', () => {
+    
+            if (money >= clickPowerCost3) {
+            perClick = perClick * 2
+            money = money - clickPowerCost3
+            moneyDisplay.textContent = money;
+
+            
+            clickPowerDisplay.textContent = perClick;
+          
+          }});
+function hideButton3() {
+        if (money >= clickPowerCost1) {
+            let hiddenButton = document.getElementById('clickPowerButton3')
+            let hiddenText = document.getElementById('costClickPower3')
+            let shownButton = document.getElementById('clickPowerButton4')
+            let shownText = document.getElementById('costClickPower4')
+                hiddenText.style.display = 'none'; 
+                hiddenButton.style.display = 'none'; 
+                shownButton.style.display = 'block';
+                shownText.style.display = 'block';
+              }}          
+
+clickPowerButton4.addEventListener('click', () => {
+    
+    if (money >= clickPowerCost4) {
+    perClick = perClick * 2
+    money = money - clickPowerCost4
+    moneyDisplay.textContent = money;
+
+    
+    clickPowerDisplay.textContent = perClick;
+  
+  }});
+function hideButton4() {
+    if (money >= clickPowerCost1) {
+    let hiddenButton = document.getElementById('clickPowerButton4')
+    let hiddenText = document.getElementById('costClickPower4')
+    let shownButton = document.getElementById('clickPowerButton5')
+    let shownText = document.getElementById('costClickPower5')
+        hiddenText.style.display = 'none'; 
+        hiddenButton.style.display = 'none'; 
+        shownButton.style.display = 'block';
+        shownText.style.display = 'block';
+      }}
+
+clickPowerButton5.addEventListener('click', () => {
+    
+    if (money >= clickPowerCost5) {
+    perClick = perClick * 2
+    money = money - clickPowerCost5
+    moneyDisplay.textContent = money;
+
+    
+    clickPowerDisplay.textContent = perClick;
+  
+  }});
+function hideButton5() {
+    if (money >= clickPowerCost1) {
+    let hiddenButton = document.getElementById('clickPowerButton5')
+    let hiddenText = document.getElementById('costClickPower5')
+    let shownButton = document.getElementById('clickPowerButton6')
+    let shownText = document.getElementById('costClickPower6')
+        hiddenText.style.display = 'none'; 
+        hiddenButton.style.display = 'none'; 
+        shownButton.style.display = 'block';
+        shownText.style.display = 'block';
+      }}
+
+clickPowerButton6.addEventListener('click', () => {
+    
+    if (money >= clickPowerCost6) {
+    perClick = perClick * 2
+    money = money - clickPowerCost6
+    moneyDisplay.textContent = money;
+    
+    clickPowerDisplay.textContent = perClick;
+  
+  }});
+function hideButton6() {
+    if (money >= clickPowerCost1) {
+    let hiddenButton = document.getElementById('clickPowerButton6')
+    let hiddenText = document.getElementById('costClickPower6')
+    let shownButton = document.getElementById('clickPowerButton7')
+    let shownText = document.getElementById('costClickPower7')
+        hiddenText.style.display = 'none'; 
+        hiddenButton.style.display = 'none'; 
+        shownButton.style.display = 'block';
+        shownText.style.display = 'block';
+      }}
+
+
+
+      //end of click upgrades
 wivesButton.addEventListener('click', () => {
     
     if (money >= wivesCostMoney && yamCounter >= wivesCostYams)  {
@@ -79,7 +227,7 @@ wivesButton.addEventListener('click', () => {
 
     wivesCostMoneyDisplay.textContent = wivesCostMoney
     wivesCostYamsDisplay.textContent = wivesCostYams
-
+    wivesDisplay.textContent = yamsPS
     
    
     

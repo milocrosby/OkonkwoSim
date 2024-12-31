@@ -4,15 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Okonkwo Sim</title>
+    <script src="init.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
-
-    </style>
+    <style> </style>
 
 </head>
 <body>
 
-    <div id="topRightText">v 0.0.0.2</div>
+<ul class="tabs">
+<li data-tab-target=#farm class="active tab">The Farm</li>
+<li data-tab-target=#umuofia class="tab">Umuofia</li>
+<li data-tab-target=#otherVillages class="tab">Other Villages</li>
+<li data-tab-target=#other class="tab">Other</li>
+</ul>
+
+<div class="tab-content">
+
+<div id="farm" data-tab-content class="active">
+    <h1>Welcome to Okonkwo Sim</h1>
+
+    <button id="yamButton">Farm Yams</button> <span id="yamsPSDisplay">0</span> Yams per second
+    <p>Yams: <span id="yamCounterDisplay">0</span></p>
+
+    <button id="sellAllYams">Sell All Yams</button> <button id="sellTenYams">Sell 10% Yams</button>
+    <p>Cowries: <span id="moneyDisplay">0</span></p>
+  
+  
+
+
+
+    <button id="wivesButton">Get a wife </button> Costs: <span id=wivesCostMoneyDisplay>100 </span> Cowries & <span id="wivesCostYamsDisplay">10 </span> Yams
+    <p>Number of Wives: <span id="wivesDisplay">0</span></p>
+
+</div>
+
+<div id="umuofia" data-tab-content>
+    <h1>Umuofia</h1>
+    <p>This is the village of Umuofia</p>
+    <p>Current Title: Agbala</p>
+    
+
+    <h2>Upgrades</h2>
+
+   <button id="clickPowerButton1" title="Doubles click power when farming yams" onclick="hideButton1()">Get a Wooden Hoe</button>  <p id="costClickPower1">Costs: 10 Cowries</p>
+   <button id="clickPowerButton2" title="Doubles click power when farming yams" onclick="hideButton2()" style="display:none">Get a Reinforced Wooden Hoe</button>  <p id="costClickPower2" style="display:none">Costs: 50 Cowries</p>
+   <button id="clickPowerButton3" title="Doubles click power when farming yams" onclick="hideButton3()" style="display:none">Get a Stone Hoe</button>  <p id="costClickPower3" style="display:none">Costs: 250 Cowries</p>
+   <button id="clickPowerButton4" title="Doubles click power when farming yams" onclick="hideButton4()" style="display:none">Basic Irrigation</button>  <p id="costClickPower4" style="display:none">Costs: 1250 Cowries</p>
+   <button id="clickPowerButton5" title="Doubles click power when farming yams" onclick="hideButton5()" style="display:none">Get a Iron Hoe</button>  <p id="costClickPower5" style="display:none">Costs: 6250 Cowries</p>
+   <button id="clickPowerButton6" title="Doubles click power when farming yams" onclick="hideButton6()" style="display:none">Advanced Irrigation</button>  <p id="costClickPower6" style="display:none">Costs: 31250 Cowries</p>
+
+</div>
+
+<div id="otherVillages" data-tab-content>
+    <h1>Other Villages</h1>
+    <p>These are the other eight villages</p>
+</div>
+<div id="other" data-tab-content>
+    <h2>Stats</h2>
+    <p>Strength of Hoe: <span id="clickPowerDisplay">1</span></p>
+
+</div>
+
+</div>
+
+
+
+    <div id="topRightText">v 0.0.0.3</div>
 
     <div class="dropdown">
         <button class="dropdown-button">
@@ -53,25 +110,10 @@
     </script>
 
 
-    <script src="init.js"></script>
-
-    <h1>Welcome to Okonkwo Sim</h1>
-
-    <button id="yamButton">Farm Yams</button> <span id="yamsPSDisplay">0</span> Yams per second
-    <p>Yams: <span id="yamCounterDisplay">0</span></p>
-
-    <button id="sellAllYams">Sell All Yams</button> <button id="sellTenYams">Sell 10% Yams</button>
-    <p>Cowries: <span id="moneyDisplay">0</span></p>
-  
-    <button id="clickPowerButton">Get Stronger Hoe  </button>  Costs: <span id="clickPowerCostDisplay">10</span> Cowries
-    <p>Strength of Hoe: <span id="clickPowerDisplay">1</span></p>
-
-    <button id="wivesButton">Get a wife </button> Costs: <span id=wivesCostMoneyDisplay>100 </span> Cowries & <span id="wivesCostYamsDisplay">10 </span> Yams
-    <p>Number of Wives: <span id="wifesDisplay">1</span></p>
 
 
    
-    <script src="index.js"></script>
+ 
     
 <script> // This is all for overlays </script>
 
@@ -86,7 +128,6 @@
 
 
     <script>
-    // script.js
     document.getElementById('openOverlay').addEventListener('click', () => {
         document.getElementById('overlay').classList.remove('hidden');
     });
@@ -95,6 +136,8 @@
         document.getElementById('overlay').classList.add('hidden');
     });
 </script>
+
+<script src="index.js"></script>
 
 </body>
 </html>
